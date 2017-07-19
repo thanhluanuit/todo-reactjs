@@ -3,13 +3,13 @@ class Todos extends React.Component {
     const todos = this.props.todos;
 
     return(
-      <ul >
+      <div className='todos-list'>
         {
           todos.map((todo, index) =>
-            <Todo content={todo.content} key={index} />
+            <Todo todo={todo} key={index} />
           )
         }
-      </ul>
+      </div>
     )
   }
 }

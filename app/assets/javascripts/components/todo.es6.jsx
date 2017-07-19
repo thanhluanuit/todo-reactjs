@@ -1,5 +1,12 @@
 class Todo extends React.Component {
   render() {
-    return <li>{this.props.content}</li>
+    const todo = this.props.todo;
+
+    return(
+      <div className='todo'>
+        <input type='checkbox' checked={todo.status}/>
+        <span>{todo.content}</span>
+      </div>
+    )
   }
 }
