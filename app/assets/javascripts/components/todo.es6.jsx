@@ -12,7 +12,6 @@ class Todo extends React.Component {
 
   updateStatusToServer(event) {
     const id = event.target.value;
-
     $.ajax({
       type: 'PUT',
       url: `/todos/${id}`,
@@ -24,7 +23,6 @@ class Todo extends React.Component {
 
   render() {
     const todo = this.props.todo;
-
     return(
       <div className='todo'>
         <input type='checkbox' defaultValue={todo.id} checked={this.state.status} onChange={this.handleChangeStatus} />
